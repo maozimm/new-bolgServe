@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
   var id = req.params.id.toString();
   var old = await Post.find({_id:id});
   // 删除旧的图片
-  if(old[0].thumbnail !== req.fields.thumbnail) {
+  if(old[0].thumbnail !== req.fields.thumbnail && req.fields.thumbnail) {
       var fs = require('fs');
       var filepath = 'F:/bolg-server/public/uploads/' + old[0].thumbnail.split('/')[3];
       fs.unlink(filepath, function(err){

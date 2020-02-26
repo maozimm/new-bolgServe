@@ -8,12 +8,12 @@ const CommentSchema = new Schema({
 	author: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User',
-		required: true
+		required: [true, '评论人id不存在']
 	},
 	// 评论内容
 	content: {
 		type: String,
-		minlength: 4,
+		minlength: 2,
 		required: true
 	},
 	// 评论文章

@@ -45,7 +45,9 @@ module.exports = app => {
 	// 删除文章
 	app.delete('/deleteArticle/:id', require('./article/deleteArticle'));
 	// 修改热门文章
-	app.put('/modifyIsHot/:id', require('./article/modifyIsHot'))
+	app.put('/modifyIsHot/:id', require('./article/modifyIsHot'));
+	// 浏览记录
+	app.post('/addViews', require('./comments/addViews'));
 	// app.post('/logout', require('./actions/other/logout'));
 	// // 判断用户是否登录
 	// app.get('/login/status', require('./actions/other/loginStatus'))
