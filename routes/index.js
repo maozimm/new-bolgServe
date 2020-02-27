@@ -48,6 +48,13 @@ module.exports = app => {
 	app.put('/modifyIsHot/:id', require('./article/modifyIsHot'));
 	// 浏览记录
 	app.post('/addViews', require('./comments/addViews'));
+	// 获取评论
+	app.get('/getComment', require('./comments/getComment'));
+	// 获取评论回复
+	app.get('/getReply', require('./reply/getReply'));
+	// 添加评论回复
+	app.post('/addReply', require('./reply/addReply'));
+	app.post('/addComment', require('./comments/addComment'))
 	// app.post('/logout', require('./actions/other/logout'));
 	// // 判断用户是否登录
 	// app.get('/login/status', require('./actions/other/loginStatus'))

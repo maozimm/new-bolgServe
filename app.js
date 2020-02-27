@@ -23,6 +23,8 @@ require('./model/connection')
 const { User } = require('./model/user')
 const { Category } = require('./model/categories')
 const { Post } = require('./model/article')
+const { Comment } = require('./model/comments')
+const { Reply } = require('./model/reply')
 // 加密模块
 const bcrypt = require('bcryptjs');
 // 生成默认管理员账号
@@ -61,6 +63,18 @@ User.findOne({'email': 'maozi@qq.com'}).then(async result => {
 //       .populate(['author','category'])
 //       .exec(function(err,docs){
 // 		console.log(docs);
+// })
+// 创建评论
+// Comment.create({
+// 	author: '5e0c86ac4a62892ad0b88533',
+// 	content: '这是一条测试评论2',
+// 	post: '5e4e4a767fd6a3edc849d5b2',
+// })
+// 回复评论
+// Reply.create({
+// 	author: '5dff3ec4e7c5e24714808192',
+// 	content: '这是一条回复评论',
+// 	comment: '5e5697375dd1972d6adefa90'
 // })
 // 路由
 require('./routes')(app);
