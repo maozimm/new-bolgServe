@@ -1,4 +1,12 @@
-
-const a = 'http://localhost:3000/upload_69841f54255a426bfb817e22990c26a4.jpg'.split('/')[3]
-console.log(a);
+function getRandomArrayElements(arr, count) {
+    var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(min);
+}
+console.log(getRandomArrayElements([1,2,3,4,5,6,7,8,9], 4))
 

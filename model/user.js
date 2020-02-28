@@ -14,7 +14,7 @@ const UserSchema = new Schema({
 		type: String,
 		required: true,
 		minlength: 2,
-		maxlength: 30
+		maxlength: 10
 	},
 	// 邮件
 	email: {
@@ -37,7 +37,7 @@ const UserSchema = new Schema({
 	// 头像
 	avatar: {
 		type: String,
-		default: null
+		default: 'http://localhost:3000/upload_b3303e7d1bf880fcd2809fb6235058b8.jpg'
 	},
 	// 创建时间
 	createTime: {

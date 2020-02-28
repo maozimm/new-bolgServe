@@ -54,7 +54,16 @@ module.exports = app => {
 	app.get('/getReply', require('./reply/getReply'));
 	// 添加评论回复
 	app.post('/addReply', require('./reply/addReply'));
-	app.post('/addComment', require('./comments/addComment'))
+	// 添加评论
+	app.post('/addComment', require('./comments/addComment'));
+	// 获取推荐文章
+	app.get('/getRecommendArticle', require('./article/getRecommendArticle'));
+	// 获取用户信息
+	app.get('/getUser/:id', require('./user/findUser'));
+	// 获取分类文章
+	app.get('/getCategoryArticle', require('./article/getCategoryArticle'));
+	// 获取用户文章
+	app.get('/getUserArticle', require('./article/getUserArticle'));
 	// app.post('/logout', require('./actions/other/logout'));
 	// // 判断用户是否登录
 	// app.get('/login/status', require('./actions/other/loginStatus'))
