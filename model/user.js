@@ -25,7 +25,9 @@ const UserSchema = new Schema({
 	// 密码
 	password: {
 		type: String,
-		required: true
+		required: true,
+		minlength: 6,
+		maxlength: 20
 	},
 	// 角色
 	role: {

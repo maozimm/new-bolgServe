@@ -1,6 +1,5 @@
 const { Post } = require('../../model/article')
 module.exports = async (req, res) => {
-    console.log(req.query.category);
     category = req.query.category.toString();
     pageNum = parseInt(req.query.pageNum);
     var searchParms = {

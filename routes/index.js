@@ -64,6 +64,10 @@ module.exports = app => {
 	app.get('/getCategoryArticle', require('./article/getCategoryArticle'));
 	// 获取用户文章
 	app.get('/getUserArticle', require('./article/getUserArticle'));
+	// 检查密码
+	app.post('/checkPassword', require('./user/checkPassword'));
+	// 修改密码
+	app.post('/modifyPassword', require('./user/modifyPassword'));
 	// app.post('/logout', require('./actions/other/logout'));
 	// // 判断用户是否登录
 	// app.get('/login/status', require('./actions/other/loginStatus'))

@@ -30,7 +30,6 @@ const bcrypt = require('bcryptjs');
 // 生成默认管理员账号
 User.findOne({'email': 'maozi@qq.com'}).then(async result => {
 	if (result == null) {
-		console.log(123);
 		// 生成盐
 		const salt = await bcrypt.genSalt(10);
 		// 使用盐对密码进行加密
