@@ -68,6 +68,10 @@ module.exports = app => {
 	app.post('/checkPassword', require('./user/checkPassword'));
 	// 修改密码
 	app.post('/modifyPassword', require('./user/modifyPassword'));
+	// 修改分类
+	app.put('/modifyCategory/:id', require('./category/modifyCategory'));
+	// 添加分类
+	app.post('/addCategory', require('./category/addCategory'));
 	// app.post('/logout', require('./actions/other/logout'));
 	// // 判断用户是否登录
 	// app.get('/login/status', require('./actions/other/loginStatus'))
